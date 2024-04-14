@@ -33,35 +33,36 @@ export default function Portfolio() {
             <Link href="/uiux" className="bg-[rgb(31,44,65)] text-white font-bold py-2 px-5 border border-white/20 rounded-full ml-4">
               App Development
             </Link>
-            <Link href="/uiux" className="bg-[rgb(31,44,65)] text-white font-bold py-2 px-5 border border-white/20 rounded-full ml-4">
+            <Link href="/uiux" className="bg-[rgb(31,44,65)] text-white font-bold py-2 px-5 border border-white20 rounded-full ml-4">
               UI Design
             </Link>
           </div>
         </div>
       </div>
       <div className="flex items-center">
-      <div className="mr-1">
+        <div className="mr-1">
           <Image src="/image/Vector 27.png" alt="Image" width={100} height={100} />
         </div>
-      
-      <div className="grid grid-cols-2 gap-8 px-20 w-max-[456px]">
-        {posts.map(post => (
-          <div key={post.id} className="bg-[rgb(12,24,46)] rounded-lg border border-white/20 overflow-hidden shadow-md p-2 relative">
-            <div className="row1">
-              <img src={post.imageUrl} alt={post.title} className="w-full h-54 object-cover rounded-lg" />
-            </div>
-            <div className="bg-[rgb(21,41,68)] row2 p-4 rounded-lg mt-6 relative z-10 border border-white/20">
-              <div className="flex flex-row mb-4">
-                <p className="mr-4 px-5 py-2 rounded-full bg-[rgb(35,49,70)] text-[rgb(57,116,220)] border border-white/20 text-xs">{post.category1}</p>
-                <p className='px-5 py-2 rounded-full bg-[rgb(35,49,70)] text-[rgb(57,116,220)] border border-white/20 text-xs'>{post.category2}</p>
+
+        <div className="grid grid-cols-2 gap-8 px-20 w-max-[456px]">
+          {posts.map(post => (
+            <div key={post.id} className="bg-[rgb(12,24,46)] rounded-lg border border-white/20 overflow-hidden shadow-md p-2 relative">
+              <div className="row1">
+                <Link href={`/detail/${post.id}`}>
+                  <img src={post.imageUrl} alt={post.title} className="w-full h-54 object-cover rounded-lg" /></Link>
               </div>
-              <h2 className="text-xl font-bold mb-2 text-white ">{post.title}</h2>
-              <p className="text-[rgb(197,197,197)] text-base overflow-hidden text-overflow-ellipsis line-clamp-3">{post.content}</p>
+              <div className="bg-[rgb(21,41,68)] row2 p-4 rounded-lg mt-6 relative z-10 border border-white/20">
+                <div className="flex flex-row mb-4">
+                  <p className="mr-4 px-5 py-2 rounded-full bg-[rgb(35,49,70)] text-[rgb(57,116,220)] border border-white/20 text-xs">{post.category1}</p>
+                  <p className='px-5 py-2 rounded-full bg-[rgb(35,49,70)] text-[rgb(57,116,220)] border border-white/20 text-xs'>{post.category2}</p>
+                </div>
+                <h2 className="text-xl font-bold mb-2 text-white ">{post.title}</h2>
+                <p className="text-[rgb(197,197,197)] text-base overflow-hidden text-overflow-ellipsis line-clamp-3">{post.content}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <div>
+          ))}
+        </div>
+        <div>
           <Image src="/image/Vector 26.png" alt="Image" width={100} height={100} />
         </div>
       </div>
