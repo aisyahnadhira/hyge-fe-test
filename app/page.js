@@ -1,13 +1,13 @@
-import Navbar from "./components/navbar";
-import Portfolio from "./components/portfolio";
-import Client from "./components/client";
+import Homepage from "./homepage";
+import DetailPage from "./detailpage";
 
 export default function Home() {
   return (
-    <main className="bg-gray-900 px-20" >
-      <Navbar/>
-      <Portfolio/>
-      <Client/>
+    <main>
+      <Homepage/>
+      {/* <DetailPage/> */}
     </main>
   );
 }
+
+// Note : I'm sorry I ran out of time to route the homepage with detailpage, so if you want to see pages, comment on the one in the main menu

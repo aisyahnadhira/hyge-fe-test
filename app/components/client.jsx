@@ -1,26 +1,35 @@
 import React from 'react'
-import Link from "next/link"
-import Image from "next/image"
 
-export default function Client () {
-  return (
-    <div className="flex flex-col items-start justify-center h-screen">
-      <div className="flex items-center mb-8">
-        <div className="mr-1">
-          <Image src="/image/Vector 24.png" alt="Image" width={100} height={100} />
+export default function Client() {
+
+    const clientImages = [
+        "/image/client/Frame 304.png",
+        "/image/client/Frame 306.png",
+        "/image/client/Frame 303.png",
+        "/image/client/Frame 313.png",
+        "/image/client/Frame 302.png",
+        "/image/client/Frame 301.png",
+        "/image/client/Frame 330.png",
+        "/image/client/Frame 311.png",
+        "/image/client/Frame 305.png",
+        "/image/client/Frame 307.png",
+        "/image/client/Frame 308.png",
+        "/image/client/Frame 309.png",
+        "/image/client/Frame 310.png",
+        "/image/client/Frame 315.png",
+    ];
+
+    return (
+        <div className="flex flex-col items-start justify-center bg-[rgb(15,17,22)] px-40 py-20 ">
+            <h1 className="text-white text-5xl font-bold mb-4">Our <span className="bg-gradient-to-r from-[rgb(31,164,217)] to-[rgb(57,116,220)] bg-clip-text text-transparent">Client</span></h1>
+            <p className="text-[rgb(197,197,197)] text-xl mb-14">Here are just few of the clients we’ve had the privilege to serve:</p>
+            <div className="flex flex-wrap">
+                {clientImages.map((imageUrl, index) => (
+                    <div key={index} className="flex items-center justify-center bg-[rgb(15,17,22)] p-4 border border-white-10 rounded-2xl mr-4 mb-4 w-auto h-17 hover:bg-[rgb(255,255,255,0.3)]">
+                            <img src={imageUrl} alt="image" className='h-12'/>
+                    </div>
+                ))}
+            </div>
         </div>
-        <div className="mr-4">
-          <h1 className="text-white text-5xl font-bold mb-10">Our <span className="text-[rgb(46,114,223)]">Portfolio</span></h1>
-          <p className="text-[rgb(197,197,197)] text-xl mb-10">As your digital partner, we collaborate with you to drive innovation, stay ahead of the curve, and deliver real impact for your business.</p>
-          <div className="inline-flex">
-            <Link className="bg-[rgb(26,104,254)]  text-white font-bold py-2 px-5 border border-white-20 rounded-full" href="/web-dev">All</Link>
-            <Link className="bg-[rgb(31,44,65)]  text-white font-bold py-2 px-5 border border-white-20 rounded-full ml-4" href="/uiux">Web Development</Link>
-            <Link className="bg-[rgb(31,44,65)]  text-white font-bold py-2 px-5 border border-white-20 rounded-full ml-4" href="/uiux">App Development</Link>
-            <Link className="bg-[rgb(31,44,65)]  text-white font-bold py-2 px-5  border border-white-20 rounded-full ml-4" href="/uiux">UI Design</Link>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
