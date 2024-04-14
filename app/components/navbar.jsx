@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function Navbar() {
   return (
  
-      <div className="flex justify-between items-center py-6">
+      <div className="flex justify-between items-center py-6 bg-[rgb(12,28,56)] px-20">
         <Image src="/image/logo.png" alt="Logo" width={100} height={27.38} />
 
         <div className="text-white bg-[rgb(32,47,76)] px-5 py-3 rounded-full ">

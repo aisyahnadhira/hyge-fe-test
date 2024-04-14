@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Portfolio () {
   return (
-    <div className="flex flex-col items-start justify-center h-screen">
+    <div className="flex flex-col items-start justify-center h-screen px-20 bg-gradient-to-b from-[rgb(12,28,56)] to-[rgb(15,17,22)]" >
       <div className="flex items-center mb-8">
         <div className="mr-1">
           <Image src="/image/Vector 24.png" alt="Image" width={100} height={100} />
