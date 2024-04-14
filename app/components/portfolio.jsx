@@ -10,7 +10,7 @@ export default function Portfolio () {
           <Image src="/image/Vector 24.png" alt="Image" width={100} height={100} />
         </div>
         <div className="mr-4">
-          <h1 className="text-white text-5xl font-bold mb-10">Our <span className="text-[rgb(46,114,223)]">Portfolio</span></h1>
+          <h1 className="text-white text-5xl font-bold mb-10">Our <span className="bg-gradient-to-r from-[rgb(31,164,217)] to-[rgb(57,116,220)] bg-clip-text text-transparent">Portfolio</span></h1>
           <p className="text-[rgb(197,197,197)] text-xl mb-10">As your digital partner, we collaborate with you to drive innovation, stay ahead of the curve, and deliver real impact for your business.</p>
           <div className="inline-flex">
             <Link className="bg-[rgb(26,104,254)]  text-white font-bold py-2 px-5 border border-white-20 rounded-full" href="/web-dev">All</Link>
