@@ -2,13 +2,13 @@ import React from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 
-export default function Detail() {
+export default function Content({ imageUrl, title }) {
     
     const techs = [
-        { id: 1, title: "HTML", imageUrl: "/image/tech/html.png" },
-        { id: 2, title: "JavaScript", imageUrl: "/image/tech/js.png" },
-        { id: 3, title: "WordPress", imageUrl: "/image/tech/wp.png" },
-        { id: 4, title: "WooCommerce", imageUrl: "/image/tech/woocommerce.png" }
+        { id: 1, titleTech: "HTML", imageTechUrl: "/image/tech/html.png" },
+        { id: 2, titleTech: "JavaScript", imageTechUrl: "/image/tech/js.png" },
+        { id: 3, titleTech: "WordPress", imageTechUrl: "/image/tech/wp.png" },
+        { id: 4, titleTech: "WooCommerce", imageTechUrl: "/image/tech/woocommerce.png" }
     ];
 
     return (
@@ -18,12 +18,12 @@ export default function Detail() {
                 <Link href="/" className="text-[rgb(197,197,197)] text-base hover:underline">Go Back</Link>
             </div>
 
-            <Image src="/image/Frame 341.png" alt="Logo" width={960} height={470} />
+            <Image src="/image/Frame 341.png" alt="Detail Image" width={960} height={470} />
 
             <div className="flex flex-wrap items-center my-9">
                 <h2 className="text-2xl font-bold mr-12">Our Role</h2>
                 <div className="flex flex-wrap">
-                                    <p className="mr-4 px-5 py-2 rounded-full bg-[rgb(35,49,70)] text-[rgb(57,116,220)] border border-white/20 text-xs">Web Development</p>
+                <p className="mr-4 px-5 py-2 rounded-full bg-[rgb(35,49,70)] text-[rgb(57,116,220)] border border-white/20 text-xs">Web Development</p>
                 <p className='px-5 py-2 rounded-full bg-[rgb(35,49,70)] text-[rgb(57,116,220)] border border-white/20 text-xs'>UI Design</p>
                 </div>
             </div>
@@ -36,8 +36,8 @@ export default function Detail() {
                     {techs.map(tech => (
                         <div key={tech.id} className="bg-[rgb(12,30,51)] rounded-lg border border-white/20 shadow-md p-2 relative flex flex-col items-center">
                             <div className="row1">
-                                <img src={tech.imageUrl} className="h-12 mb-1" />
-                                <h2 className="text-base font-bold mb-1 text-white">{tech.title}</h2>
+                                <img src={tech.imageTechUrl} className="h-12 mb-1" />
+                                <h2 className="text-base font-bold mb-1 text-white">{tech.titleTech}</h2>
                             </div>
                         </div>
                     ))}

@@ -1,12 +1,9 @@
-import Homepage from "./homepage";
-import DetailPage from "./detailpage";
+import Homepage from "./pages/page";
+// import DetailPage from "./detailpage";
 
 export default function Home() {
   return (
-    <main>
-      <Homepage/>
-      {/* <DetailPage/> */}
-    </main>
+    <Homepage/>
   );
 }
 
