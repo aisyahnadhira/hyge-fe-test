@@ -48,7 +48,7 @@ export default function Portfolio() {
           {posts.map(post => (
             <div key={post.id} className="bg-[rgb(12,24,46)] rounded-lg border border-white/20 overflow-hidden shadow-md p-2 relative">
               <div className="row1">
-                <Link href={`/detail/${post.id}`}>
+                <Link href={`pages/detailpage`}>
                   <img src={post.imageUrl} alt={post.title} className="w-full h-54 object-cover rounded-lg" /></Link>
               </div>
               <div className="bg-[rgb(21,41,68)] row2 p-4 rounded-lg mt-6 relative z-10 border border-white/20">
